@@ -13,11 +13,25 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+
+int stack[40],top,i;
+ void display()
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\n",stack[i]);
+}
+}
+
+
+
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/63e4010c-12fc-4a71-b9ff-f71ce986b68c)
+
 
 
 
@@ -36,11 +50,32 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+
+
+int size=3,top=1;
+float stack[40];
+void push (float data)
+{
+    if (top==size-1 )
+    {
+        printf("stack is full\n");
+        
+    }
+    else
+    {
+        top ++;
+        stack[top] = data;
+        
+    }
+}
+
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/ccdbe56a-20c8-4917-8d50-d2ddd46c84ed)
+
 
 
 
@@ -62,11 +97,31 @@ Algorithm:
  
 Program:
 
-//type your code here
+```
+int queue[50], rear, front,i;
+void display()
+{
+    if(front==-1)
+    {
+        printf("No elements to display");
+        
+    }
+    else
+    {
+        for(i=front;i<=rear;i++)
+        {
+            printf("%d ",queue[i]);
+            
+        }
+        
+    }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/d368aabd-a84b-4c21-8ee0-af088a92122a)
+
 
 
 Result:
@@ -86,11 +141,28 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+int size=4, rear=-1, front=-1; 
+float queue[50];
+void enqueue(float data)
+{
+    if(rear<size)
+    {
+        if(front==-1)
+        {
+            front=0;
+        }
+        rear=rear+1;
+        queue[rear]=data;
+        
+    }
+}
+```
+
 
 Output:
+![image](https://github.com/user-attachments/assets/f3505462-578d-4fe0-88ba-d8af25380af6)
 
-//paste your output here
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +193,24 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+```
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else{
+        front=front+1;
+    }
+}
+```
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/74fdbf99-8be5-472f-b0e1-eff360efd0b6)
+
 
 
 Result:
